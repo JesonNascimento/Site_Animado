@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    overflow-y: hidden;/*esconde as informações excedentes*/
+
+}
+
+.noite{
+    height: 80vh;
+    width: 70vw;
+    /*border: 1px solid black;*/
+    margin: 5rem auto;
+    background: url('./Img_1.png');
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0,0,0,0.4);
+    overflow-x: hidden;
+}
+.superficie{
+    height: 140px;
+    width: 500%;
+    background: url('./Img_02.png');
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    /*animation: moveRight 6s linear infinite;*/
+}
+
+.carro{
+    position: absolute;
+    bottom: 6%;
+    left: 24%;
+    /*animation: suspension 1s linear infinite;*/
+}
+
+/*Animação*/
+
+@keyframes moveRight {
+    100%{transform: translateX(-2050px);}
+}
+
+@keyframes suspension {
+    100%{ transform: translateY(-1px);}
+     50%{
+         transform: translateY(2px);
+
+     }
+     0%{ transform: translateY(-1px)}
+}
+
+.moveRight{
+    animation: moveRight 6s linear infinite;
+}
+
+.suspension{
+    animation: suspension 1s linear infinite;
+}
+
+
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;/*https://developer.mozilla.org/en-US/docs/Web/CSS/place-items*/ /*permite que você alinhe
+     itens ao longo das direções do bloco e inline de uma vez
+      (ou seja, as propriedades e ) em um sistema de layout relevante,
+       como Grid ou Flexbox . Se o segundo valor não for definido, o primeiro
+        valor também será usado para ele.place-items align-itemsjustify-items*/
+
+background: #000;
+
+}
+
+.center{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.outer{
+    position: relative;
+    margin: 0 30px;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    /*background: #111;*/
+}
+.button{
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}¨
+
+.outer, button, .outer span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outer button{
+    background: #111;
+    color: #f2f2f2;
+    /*color:#174253*/
+    outline: none;
+    border: none;
+    font-size: 20px;
+    z-index: 9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button button{
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+}
+
+.circle, button{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.outer span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.button span{
+    border-radius: 50px;
+}
+.circle, span{
+    border-radius: 50%;
+}
+
+.outer/*:hover*/ span:nth-child(1){/*seleciona elementos com base em suas posições em um grupo de elementos irmãos.*/
+filter: blur(7px);/*A função CSS aplica umblur() Desfoque gaussiano*/
+}
+
+.outer/*:hover*/ span:nth-child(2){
+    filter: blur(14px);
+}
+.outer/*:hover*/{
+    /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
+animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        filter: hue-rotate(0deg);/*A função CSS gira ohue-rotate() matizde um elemento e seu conteúdo. Seu resultado é a <filter-function>.*/
+
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/*@media (max-width: 640px){
+    .center{
+        display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+    }
+    
+    .outer{
+        
+        margin: 50px 0px;
+      
+    }
+}*/
+
+
+
+
+ 
